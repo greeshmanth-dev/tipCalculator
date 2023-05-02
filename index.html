@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section class='inputBox'>
+    <div class='container' id='topContainer'>
+      <div class='title'>Bill total</div>
+      <div class="inputContainer">
+        <span>₹</span>
+        <input onkeyup='calculateBill()' type='text' id='billTotalInput' placeholder='0.00'>
+      </div>
+    </div>
+      <div class="container">
+      <div class='title'>Tip</div>
+      <div class='inputContainer'>
+        <span>%</span>
+        <input onkeyup='calculateBill()' type='text' id='tipInput' placeholder='10'/>
+      </div>
+        <div class="container" id="bottom">
+          <div class='splitContainer'>
+            <div class='title'>People</div>
+            <div class=controls>
+              <span class='buttonContainer'>
+              <button class='splitButton' onclick='increasePeople()'>
+                <span class="buttonText">+</span>
+              </button>
+              </span>
+              <span class="splitAmount" id="numberOfPeople">1</span>
+              <span class="buttonContainer">
+                <button class='splitButton' onclick='decreasePeople()'>
+                  <span class='buttonText'>-</span>
+                </button>
+              </span>
+            </div>
+    </div>
+          <div class='totalContainer'>
+            <div class='title'>Total per Person</div>
+            <div class='total' id='perPersonTotal'>₹0.00</div>
+        </div>
+    
+  </section>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
